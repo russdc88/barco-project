@@ -1,16 +1,30 @@
 <template>
 	<div class="client-post">
-		<v-row>
+		<v-container>
+		<v-row
+		justify-lg="end"
+		justify="end">
+			<v-col
+			lg='3'
+			cols='3'
+			>
+				<v-btn
+				text
+				to='/'>
+				<v-icon large>
+					home
+				</v-icon>
+				</v-btn>
+			</v-col>
+		</v-row>
+		<v-row
+		justify="center">
 			<v-col
 			v-for="post in clientPosts"
 			v-bind:key="post.id"
-			xl='6'
-			lg='6'
-			md='6'
-			sm='6'
-			xs='12'>
+			cols="10">
 				<v-card
-				color="#385F73"
+				color="#01579B"
 				dark
 				>
 					<v-card-title class="headline">{{post.title}}</v-card-title>
@@ -22,10 +36,12 @@
 					</v-card-text>
 					<v-expansion-panels>
 						<v-expansion-panel>
-							<v-expansion-panel-header>
+							<v-expansion-panel-header
+							color="#0277BD">
 								Comments
 							</v-expansion-panel-header>
-							<v-expansion-panel-content>
+							<v-expansion-panel-content
+							color="#0277BD">
 								<Comments :postID="post.id"/>
 							</v-expansion-panel-content>
 						</v-expansion-panel>
@@ -33,6 +49,7 @@
 					</v-card>
 			</v-col>
 		</v-row>
+		</v-container>
 	</div>
 </template>
 

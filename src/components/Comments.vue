@@ -2,16 +2,8 @@
 		<div class="comments">
 			<div class="new-comments" v-for="comment in comments"
 			v-bind:key="comment.id">
-			<v-list-item>
-				<v-list-item-content>
-					<v-list-item-header>
-						{{comment.name}}
-					</v-list-item-header>
-					<v-list-item-subtitle>
-						{{comment.body}}
-					</v-list-item-subtitle>
-				</v-list-item-content>
-			</v-list-item>
+				<h3>{{comment.name}}</h3>
+				<p>"{{comment.body}}"</p>
 
 			</div>
 		</div>
@@ -39,7 +31,7 @@ export default {
 			})
 		}
 	},
-	mounted() {
+	beforeMount() {
 		this.grabComments()
 	}
 }

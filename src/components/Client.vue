@@ -1,6 +1,7 @@
 <template>
 	<div class="client">
-		<v-row>
+		<v-row justify='center'
+		justify-lg='start'>
 			<v-col
 			v-for="client in clients"
 			v-bind:key="client.id"
@@ -8,9 +9,10 @@
 			lg='3'
 			md='4'
 			sm='6'
-			xs='12'>
+			xs='12'
+			cols='11'>
 				<v-card
-				color="#385F73"
+				color="#01579B"
 				dark
 				>
 					<v-card-title class="headline">{{client.name}}</v-card-title>
