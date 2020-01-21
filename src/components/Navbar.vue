@@ -1,3 +1,4 @@
+// Navbar for the webpage
 <template>
   <v-card>
     <v-app-bar color="white">
